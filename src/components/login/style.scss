@@ -1,0 +1,117 @@
+.login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(232, 230, 231);
+
+    & .gradientHolder {
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+
+        z-index: 1;
+        filter: blur(100px);
+        opacity: .25;
+        background-blend-mode: multiply;
+        background: linear-gradient(90deg, #f5a623 10.88%, #3180ee 48.46%, #f81ce6c6 63.51%);
+    }
+
+    & .loginContainer {
+        border-radius: 0px 50px;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        background-color: whitesmoke;
+        padding: 25px;
+        z-index: 2;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+
+
+        & .loginHead {
+            color: rgb(76, 76, 76);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & .icon {
+                padding: 10px;
+                color: rgb(252, 24, 62);
+
+            }
+
+            & .dot {
+                color: rgb(252, 24, 62);
+            }
+        }
+
+        & .row {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+
+            input {
+                padding: 10px;
+                font-size: 15px;
+                outline: none;
+                font-size: 20px;
+                border-top: 2px solid rgba(0, 0, 0, 0);
+                border-right: 2px solid rgba(0, 0, 0, 0);
+                border-left: 2px solid rgba(0, 0, 0, 0);
+                border-bottom: 2px solid rgb(76, 76, 76);
+                background-color: #f8f6f6;
+            }
+
+
+
+            .register {
+                text-align: center;
+                color: rgb(76, 76, 76);
+            }
+        }
+
+    }
+
+    button {
+        background-color: #1cb25a;
+        border: none;
+        color: #FFFFFF;
+
+        &:active {
+            cursor: pointer;
+            background-color: #1ba254;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #178b47;
+        }
+    }
+}
+
+
+
+button {
+    padding: 10px;
+    font-size: 20px;
+    transition: all .2s;
+
+    &:active {
+        transform: translateY(2px);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.labelTitle {
+    font-weight: 500;
+    font-size: 20px;
+    padding: 5px 0px;
+    color: rgb(76, 76, 76);
+}

@@ -1,0 +1,81 @@
+.dashBoard {
+    min-height: 100vh;
+    background-color: #93b4c7;
+
+    & .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        height: 80px;
+        background-color: rgb(68, 179, 210);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 5;
+
+        & button {
+            background-color: rgb(211, 86, 86);
+            color: rgb(255, 255, 255);
+            border: none;
+            margin-right: 30px;
+            width: 100px;
+
+
+            &:hover {
+                background-color: rgb(226, 75, 75);
+                box-shadow: 0px 0px 2px 2px rgba(147, 147, 147, 0.53);
+            }
+        }
+    }
+
+    & .content {
+        margin-top: 80px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        & .searchBar {
+            width: 840px;
+            background-color: rgb(238, 238, 238);
+            box-shadow: 0px 0px 5px 2px rgba(82, 82, 82, 0.358);
+            padding: 20px;
+            border-radius: 60px;
+            margin-top: 40px;
+
+            & .wrapper {
+                width: 100%;
+                border: 1px solid black;
+                border-radius: 50px 50px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            & .searchField {
+                padding: 10px;
+                border: 1px solid rgba(255, 0, 0, 0);
+                flex-grow: 1;
+                margin-left: 40px;
+                margin-right: 40px;
+                outline: none;
+                font-size: 25px;
+                background-color: rgb(238, 238, 238);
+
+                &::placeholder {
+                    font-size: 25px;
+                    color: rgba(167, 167, 167, 0.582);
+                }
+            }
+        }
+
+
+        & .results_static {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+}
