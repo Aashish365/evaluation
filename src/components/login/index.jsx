@@ -11,11 +11,10 @@ export default function Login(props) {
 
 	const handleLogin = (e) => {
 		e.preventDefault();
-		console.log("button cicked");
 		if (email && password) {
-			// const credentials = { email, password };
-			// localStorage.setItem("credentials", JSON.stringify(credentials));
-			// Cookies.set("credentials", JSON.stringify(credentials));
+			const credentials = { email, password };
+			localStorage.setItem("credentials", JSON.stringify(credentials));
+			Cookies.set("credentials", JSON.stringify(credentials));
 			dispatch(authActions.login());
 		}
 	};
