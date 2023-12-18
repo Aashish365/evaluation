@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import "./style.scss";
 import WeatherCard from "../weatherCard";
 import { useEffect, useState } from "react";
+import { authActions } from "../../reducers/authReducer";
 
 export default function Dashboard(props) {
 	const dispatch = useDispatch();
@@ -28,7 +29,7 @@ export default function Dashboard(props) {
 	}, [query]);
 
 	const handleLogout = () => {
-		dispatch({ type: "logout" });
+		dispatch(authActions.logout());
 		props.clearDataHandler();
 	};
 

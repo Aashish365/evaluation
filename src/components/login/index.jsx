@@ -2,6 +2,7 @@ import Cookies from "js-cookie";
 import "./style.scss";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { authActions } from "../../reducers/authReducer";
 
 export default function Login(props) {
 	const [email, setEmail] = useState("");
@@ -10,12 +11,12 @@ export default function Login(props) {
 
 	const handleLogin = (e) => {
 		e.preventDefault();
-		console.log("clicked");
+		console.log("button cicked");
 		if (email && password) {
-			const credentials = { email, password };
-			localStorage.setItem("credentials", JSON.stringify(credentials));
-			Cookies.set("credentials", JSON.stringify(credentials));
-			dispatch({ type: "login" });
+			// const credentials = { email, password };
+			// localStorage.setItem("credentials", JSON.stringify(credentials));
+			// Cookies.set("credentials", JSON.stringify(credentials));
+			dispatch(authActions.login());
 		}
 	};
 
